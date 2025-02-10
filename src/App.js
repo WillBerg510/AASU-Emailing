@@ -53,7 +53,7 @@ class App extends React.Component {
         <button onClick={async () => {
           await window.navigator.clipboard.writeText(body);
         }}>Copy text</button>
-        <p><a href={mailto} target="_blank">Click to open your email app!</a></p>
+        <p><a href={mailto}>Click to open your email app!</a></p>
       </div>
     );
   }
