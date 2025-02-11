@@ -2,8 +2,35 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      senderName: "",
+      senderDescription: "",
+      senderOrg: "",
+      senderPosition: "",
+    }
+  }
+
+  changeName = (e) => {
+    this.setState({senderName: e.target.value});
+  }
+
+  changeDescription = (e) => {
+    this.setState({senderDescription: e.target.value});
+  }
+
+  changeOrg = (e) => {
+    this.setState({senderOrg: e.target.value});
+  }
+
+  changePosition = (e) => {
+    this.setState({senderPosition: e.target.value});
+  }
 
   render() {
+    const { senderName, senderDescription, senderOrg, senderPosition } = this.state;
+
     const emails = [
       "waberg@cfl.rr.com",
       "will.berg@ufl.edu",
@@ -11,13 +38,9 @@ class App extends React.Component {
       "webmaster.aasu@gmail.com",
     ];
     const subject = "Advocacy Email";
-    const senderName = "Will Berg";
-    const senderDescription = "I am a second-year computer science major."
-    const senderOrg = "AASU";
-    const senderPosition = "Webmaster";
     const body = `To whomever it may concern,
 
-    My name is ${senderName}. ${senderDescription} I am involved in ${senderOrg} here at the University of Florida. I am writing to you concerning the closure of the Center for Inclusion and Multicultural Engagement (CIME) on the second floor of the Reitz Union. More specifically, I would like to express my frustration at the closure of the Office of Asian Pacific Islander Desi Student Engagement (OAPIDSE), which provided significant support to the Asian Pacific Islander Desi (APID) community at the University of Florida.
+    My name is ${senderName ? senderName : "[YOUR NAME]"}. ${senderDescription ? senderDescription : "[YOUR DESCRIPTION]"} I am involved in ${senderOrg ? senderOrg : "[YOUR ORG]"} here at the University of Florida. I am writing to you concerning the closure of the Center for Inclusion and Multicultural Engagement (CIME) on the second floor of the Reitz Union. More specifically, I would like to express my frustration at the closure of the Office of Asian Pacific Islander Desi Student Engagement (OAPIDSE), which provided significant support to the Asian Pacific Islander Desi (APID) community at the University of Florida.
     
     The CIME and OAPIDSE played a key role in building a community for APID students here at UF. The OAPIDSE provided a designated space for APID students to engage in activities that promoted community and student wellness, offering an opportunity for individuals to bond with others and destress in a welcoming environment. The OAPIDSE also allowed the coordination of events and celebrations focused on highlighting the importance of APID communities and their cultures. These events brought together students of all backgrounds, providing engaging opportunities for immersion in on-campus activities and student life. 
     
@@ -45,6 +68,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>ADVOCACY EMAIL SITE</h1>
+        <input type="text" name="senderName" placeholder="Your Name" onChange={this.changeName}/>
+        <input type="text" name="senderDescription" placeholder="Your Description" onChange={this.changeDescription}/>
+        <input type="text" name="senderOrg" placeholder="The Organization You Represent" onChange={this.changeOrg}/>
+        <input type="text" name="senderPosition" placeholder="Position Within Organization" onChange={this.changePosition}/>
         <h2>MESSAGE</h2>
         <p id="message">{body}</p>
         <button onClick={async () => {
