@@ -56,9 +56,8 @@ class App extends React.Component {
     
     Sincerely,
     
-    ${senderName}
-    ${senderPosition}
-    ${senderOrg}
+    ${senderName ? senderName : "[YOUR NAME]"}${senderPosition ? "\n    " + senderPosition : ""}
+    ${senderOrg ? senderOrg : "[YOUR ORGANIZATION]"}
     `;
 
     const mailto = `
