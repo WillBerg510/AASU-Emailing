@@ -78,7 +78,7 @@ My name is ${senderName ? senderName : "[YOUR NAME]"}.  ${senderDescription ? se
 
 The CIME and OAPIDSE played a key role in building a community for APID students here at UF. By providing opportunities for multicultural events and the celebration of APID heritage, the OAPIDSE brought students from diverse backgrounds together to commemorate APID culture and history. In doing so, the OAPIDSE promoted student connections, forging friendships and allowing for positive interactions that enhanced the lives of students on campus. Without the OAPIDSE, students throughout the university have notably less opportunities to engage with other cultures and participate in crucial learning experiences. This, combined with the loss of various multicultural initiatives at UF, negatively impacts student life throughout UF. The OAPIDSE stood for the excellence of APID individuals, representing the interests and achievements of these individuals throughout UF’s history and current student body. It championed the university’s core values of inclusion, community, and excellence, while sponsoring programs that highlighted the importance of a strong APID community. As a result, the OAPIDSE significantly improved the lives of APID students throughout UF, as well as the well-being of others who engaged in these celebrations. Without the essential support this office provided, the APID community suffers from UF’s negligence in ensuring equal support for all its students. In spite of its goals to be among the country’s top academic institutions, by dissolving the OAPIDSE, the University of Florida violates its promise to provide students with the best resources for their success. 
 ${senderExperience ? ('\nDuring my time as a student at the University of Florida, the OAPIDSE greatly enhanced my experiences through its measures to promote community and inclusivity. ' + senderExperience + ' For these reasons, the significance of the OAPIDSE to my success at UF cannot be understated.\n') : ""}
-Thank you for taking the time to review these concerns on the closure of the OAPIDSE and CIME. This issue is very important to me, and I believe that your office can play a substantial role in providing crucial resources for the Asian Pacific Islander Desi community at the University of Florida. I urge you to take concrete action in these matters to ensure that all students at UF are given the resources they need to succeed. If you wish to discuss this issue further, please don’t hesitate to contact ufaasu.advocacy@gmail.com. We will continue to advocate for the issues addressed in this email, as well as any future developments, to promote and protect the APID community at UF.
+Thank you for taking the time to review these concerns on the closure of the OAPIDSE and CIME. This issue is very important to me, and I believe that your office can play a substantial role in providing crucial resources for the Asian Pacific Islander Desi community at the University of Florida. I urge you to take concrete action in these matters to ensure that all students at UF are given the resources they need to succeed. If you wish to discuss this issue further, please don’t hesitate to contact ufaasu.advocacy@gmail.com or vpe.aasu@gmail.com. We will continue to advocate for the issues addressed in this email, as well as any future developments, to promote and protect the APID community at UF.
 
 Thank you for all that you do for UF students. 
 
@@ -108,14 +108,14 @@ ${senderOrg ? senderOrg : "[YOUR ORGANIZATION]"}
           </div>
           <div className="box">
             <input type="text" name="senderOrg" placeholder="The Organization You Represent" onChange={this.changeOrg}/>
-            <p className="example">e.g. FSA</p>
+            <p className="example">e.g. Filipino Student Association</p>
           </div>
           <div className="box">
             <input type="text" name="senderPosition" placeholder="Position Within Organization" onChange={this.changePosition}/>
             <p className="example">e.g. Treasurer (Optional)</p>
           </div>
           <div className="box" id="personalExperiences">
-            <textarea type="text" id="senderExperience" name="senderExperience" placeholder="Personal Experiences" onChange={this.changeExperience}/>
+            <textarea type="text" id="senderExperience" name="senderExperience" placeholder="Personal Experiences With the OAPIDSE" onChange={this.changeExperience}/>
             <p className="example">(Optional)</p>
           </div>
           <p><b>2. TO USE YOUR DEFAULT EMAIL APP:</b> Click the button below to copy the body of the email.</p>
